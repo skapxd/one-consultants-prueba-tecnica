@@ -16,7 +16,7 @@ jobs:
           node-version: 16
       - 
         name: Change to Frontend directory
-        run: cd ./front
+        run: cd front
       -
         name: Show Package.json file
         run: cat ./package.json
