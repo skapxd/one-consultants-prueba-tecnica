@@ -14,6 +14,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+      - 
+        name: Change to Frontend directory
+        run: cd ./front
       -
         name: Install yarn
         run: npm i yarn
