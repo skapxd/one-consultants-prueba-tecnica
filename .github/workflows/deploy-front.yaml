@@ -18,17 +18,17 @@ jobs:
         name: Change to Frontend directory
         run: cd ./front
       -
-        name: Install yarn
-        run: npm i yarn
+        name: Show Package.json file
+        run: cat ./package.json
+      -
+        name: Yarn version
+        run: yarn -v
       - 
         name: Install Node Dependencies
         run: yarn
       - 
         name: Build static files from jsx
         run: yarn build
-      -
-        name: Show Package.json file
-        run: cat ./package.json
       -
         name: Deploy to GitHub Pages
         if: success()
