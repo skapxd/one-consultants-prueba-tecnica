@@ -14,26 +14,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - 
-        name: Change to Frontend directory
-        run: cd front
       -
-        name: Show Package.json file
+        name: Build static file from jsx
         run: |
           cd front
-          cat ./package.json
-          yarn -v
           yarn
           yarn build
-      # -
-      #   name: Yarn version
-      #   run: yarn -v
-      # - 
-      #   name: Install Node Dependencies
-      #   run: yarn
-      # - 
-      #   name: Build static files from jsx
-      #   run: yarn build
       -
         name: Deploy to GitHub Pages
         if: success()
