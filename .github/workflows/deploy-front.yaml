@@ -19,16 +19,21 @@ jobs:
         run: cd front
       -
         name: Show Package.json file
-        run: cat ./package.json
-      -
-        name: Yarn version
-        run: yarn -v
-      - 
-        name: Install Node Dependencies
-        run: yarn
-      - 
-        name: Build static files from jsx
-        run: yarn build
+        run: |
+          cd front
+          cat ./package.json
+          yarn -v
+          yarn
+          yarn build
+      # -
+      #   name: Yarn version
+      #   run: yarn -v
+      # - 
+      #   name: Install Node Dependencies
+      #   run: yarn
+      # - 
+      #   name: Build static files from jsx
+      #   run: yarn build
       -
         name: Deploy to GitHub Pages
         if: success()
