@@ -1,9 +1,39 @@
+import '@picocss/pico'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { App } from '#/src/App'
+import { Provider } from 'react-redux'
+import { store } from './globalState/store'
+import {
+  createBrowserRouter,
+  RouterProvider
+} from 'react-router-dom'
+import { ErrorPage } from './page/ErrorPage'
+import { DataAcademic } from './page/DataAcademic/DataAcademicPage'
+import { DataPersonalPage } from './page/DataPersonalPage/DataPersonalPage'
+import { SummaryPage } from './page/SummaryPage/SummaryPage'
+
+export const pathOfPages = [
+  {
+    path: '/',
+    element: <DataPersonalPage/>,
+    errorElement: <ErrorPage/>
+  },
+  {
+    path: '/academic',
+    element: <DataAcademic />
+  },
+  {
+    path: '/summary',
+    element: <SummaryPage />
+  }
+]
+
+export const router = createBrowserRouter(pathOfPages)
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <Provider store={store} >
+      <RouterProvider router={router}/>
+    </Provider>
   </React.StrictMode>
 )
