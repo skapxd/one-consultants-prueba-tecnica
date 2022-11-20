@@ -1,15 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import './global.css'
+import '@picocss/pico'
+import { DataPersonalPage } from './page/DataPersonalPage'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export const App = () => {
   return (
-    <div className="App">
-      hello word
-    </div>
+    <>
+      <DataPersonalPage />
+    </>
   )
 }
-
-export default App
