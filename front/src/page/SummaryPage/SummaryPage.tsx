@@ -8,7 +8,7 @@ export const SummaryPage = () => {
 
   const onSaveData = async () => {
     try {
-      await postSaveDataService({ academic: {}, user: {} })
+      await postSaveDataService({ academic, user })
     } catch (error) {
       // @ts-ignore
       console.error('🚀 ~ Error Service: SummaryPage.tsx ~ line 12 ~ onSaveData ~ error', error.message)
