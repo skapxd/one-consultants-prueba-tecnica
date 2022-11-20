@@ -14,16 +14,16 @@ import { SummaryPage } from './page/SummaryPage/SummaryPage'
 
 export const pathOfPages = [
   {
-    path: './',
+    path: '/',
     element: <DataPersonalPage/>,
     errorElement: <ErrorPage/>
   },
   {
-    path: './academic',
+    path: '/academic',
     element: <DataAcademic />
   },
   {
-    path: './summary',
+    path: '/summary',
     element: <SummaryPage />
   }
 ]
