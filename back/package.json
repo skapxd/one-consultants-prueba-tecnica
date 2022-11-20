@@ -8,7 +8,7 @@
   "scripts": {
     "doc": "@compodoc/compodoc -p tsconfig.json",
     "prebuild": "rimraf dist",
-    "build": "yarn doc && nest build",
+    "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "dev": "nest start --watch",
