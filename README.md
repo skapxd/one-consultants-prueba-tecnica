@@ -4,13 +4,13 @@
 
 Se puede acceder a la página web con este [enlace](https://skapxd.github.io/one-consultants-prueba-tecnica/)
 
-El frontend esta desarrollado en React y desplegado utilizando GitHub Pages, el deploy de realiza de forma automágica al aceptar una PR y PUSH
+El frontend esta desarrollado en React y desplegado utilizando GitHub Pages, el deploy se realiza de forma automágica al hacer PUSH o aceptar una PR
 
 ## Backend
 
 Se puede acceder a los endpoints con este [enlace](https://one-consultants-prueba-tecnica-production.up.railway.app/)
 
-El backend esta desarrollado en Nestjs y desplegado utilizando Railway, el deploy de realiza de forma automágica al aceptar una PR y PUSH
+El backend esta desarrollado en Nestjs y desplegado utilizando Railway, el deploy se realiza de forma automágica al hacer PUSH o aceptar una PR
 
 ## Machine Environment
 
