@@ -8,7 +8,7 @@ El frontend esta desarrollado en React y desplegado utilizando GitHub Pages, el 
 
 ## Backend
 
-Se puede acceder a los endpoints con este [enlace](https://one-consultants-prueba-tecnica-production.up.railway.app/)
+Se puede acceder a la documentación de los endpoints con este [enlace](https://one-consultants-prueba-tecnica-production.up.railway.app/index.html)
 
 El backend esta desarrollado en Nestjs y desplegado utilizando Railway, el deploy se realiza de forma automágica al hacer PUSH o aceptar una PR
 
