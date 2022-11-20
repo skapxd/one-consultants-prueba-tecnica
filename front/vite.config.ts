@@ -4,10 +4,6 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  server: {
-    // @ts-ignore
-    port: process.env.PORT || 3001
-  },
   plugins: [react()],
   test: { environment: 'happy-dom' },
   base: './',
