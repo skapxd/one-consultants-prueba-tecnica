@@ -4,7 +4,10 @@ import { useEffect, useState } from 'react'
 export const useGetAllStudentsService = () => {
   let isActiveHook = true
 
-  const [students, setStudents] = useState([] as Array<any>)
+  const [students, setStudents] = useState({
+    isLoading: true,
+    data: [] as Array<any>
+  })
 
   const getAllStudents = async () => {
     try {
@@ -16,16 +19,15 @@ export const useGetAllStudentsService = () => {
 
       if (!isActiveHook) return
 
-      setStudents([...json.data])
+      setStudents({ isLoading: false, data: [...json.data] })
     } catch (error) {
       // @ts-ignore
       console.error('🚀 ~ Error Service: TableRegisterPage.spec.tsx ~ line 22 ~ getAllStudents ~ error', error.message)
-      setStudents([])
+      setStudents({ isLoading: false, data: [] })
     }
   }
 
   useEffect(() => {
-    console.log('hola')
     return () => {
       isActiveHook = false
     }

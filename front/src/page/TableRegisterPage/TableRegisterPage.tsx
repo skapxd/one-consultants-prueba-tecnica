@@ -5,19 +5,22 @@ import { useGetAllStudentsService } from './provider/useGetAllStudents'
 export const TableRegisterPage = () => {
   const { getAllStudents, students } = useGetAllStudentsService()
 
-  // const students = []
-
   useEffect(() => {
     getAllStudents()
+    const progress = document.getElementById('indeterminate-progress') as any
+    if (!progress) return
+    progress.indeterminate = true
   }, [])
-
-  if (students.length === 0) return <h1>loading</h1>
 
   return (
     <div className='container'>
       <Header />
 
       <article>
+
+        <div style={{ height: '30px' }} >
+          {students.isLoading && <progress id='indeterminate-progress'/>}
+        </div>
 
         <h1>Lista de estudiantes</h1>
         <figure>
@@ -35,7 +38,8 @@ export const TableRegisterPage = () => {
               </tr>
             </thead>
             <tbody>
-              {students.map((e, i) => {
+
+              {students.data.map((e, i) => {
                 return (
                   <tr key={i}>
                     <th scope="row" data-testid='row' >{i + 1}</th>
