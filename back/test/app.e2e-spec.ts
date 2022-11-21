@@ -21,4 +21,16 @@ describe('AppController (e2e)', () => {
       .expect(200)
       .expect('Hello World!');
   });
+
+  it('/students (GET)', () => {
+    return request(app.getHttpServer()).get('/students').expect(200).expect([]);
+  });
+
+  it('/students (POST)', async () => {
+    const resp = await request(app.getHttpServer())
+      .post('/students')
+      .send({ abc: 'avc' })
+      .set('Content-Type', 'application/json');
+    expect(resp.status).toBe(201);
+  });
 });
