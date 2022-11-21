@@ -24,10 +24,10 @@ export const postSaveDataService = async (props: IPostSaveDataService) => {
     body: JSON.stringify({ academic, user })
   }
 
-  const url = CustomSettings.getUrlBaseServer()
+  const url = CustomSettings.getUrlBaseServer('/students')
 
   const resp = await fetch(url, config)
   const json = await resp.json()
-
+  if (resp.status >= 400) throw new Error(JSON.stringify(json.message, null, 2))
   return json
 }

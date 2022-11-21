@@ -55,6 +55,8 @@ export const DataAcademic = () => {
       navigate('/summary')
     } catch (error) {
       // @ts-ignore
+      console.log('🚀 ~ file: DataAcademicPage.tsx ~ line 57 ~ onSubmit ~ error', error.message)
+      // @ts-ignore
       setModal({ canShow: true, message: error.message })
     }
   }
@@ -145,7 +147,7 @@ export const DataAcademic = () => {
           <h3>Datos incorrectos</h3>
           <p>{modal.message}</p>
           <footer>
-            <a href="#confirm" role="button" onClick={() => setModal(e => ({ ...e, canShow: false }))} >Confirm</a>
+            <button role="button" onClick={() => setModal(e => ({ ...e, canShow: false }))} >Confirm</button>
           </footer>
         </article>
       </dialog>

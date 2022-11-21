@@ -11,6 +11,7 @@ import { ErrorPage } from './page/ErrorPage'
 import { DataAcademic } from './page/DataAcademic/DataAcademicPage'
 import { DataPersonalPage } from './page/DataPersonalPage/DataPersonalPage'
 import { SummaryPage } from './page/SummaryPage/SummaryPage'
+import { TableRegisterPage } from './page/TableRegisterPage/TableRegisterPage'
 
 export const pathOfPages = [
   {
@@ -25,6 +26,10 @@ export const pathOfPages = [
   {
     path: '/summary',
     element: <SummaryPage />
+  },
+  {
+    path: '/table-register',
+    element: <TableRegisterPage />
   }
 ]
 

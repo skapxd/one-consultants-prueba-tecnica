@@ -1,11 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-
-export interface IAcademic {
-  course: string
-  year: string
-  period: string
-  teacher: string
-}
+import { IAcademic } from '../../../Domain/IAcademic'
+export type { IAcademic }
 
 const initialState: IAcademic = {
   course: '',
