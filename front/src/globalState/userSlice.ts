@@ -1,6 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { IUser } from '../../../Domain/IUser'
-export type { IUser }
+
+export interface IUser {
+  email: string
+  firstName: string
+  lastName: string
+}
 
 const initialState: IUser = {
   email: '',
