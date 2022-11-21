@@ -7,7 +7,7 @@
     "test": "vitest",
     "test:e2e": "playwright test",
     "dev": "vite",
-    "start": "http-server ./dist",
+    "start": "npx http-server ./dist",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
