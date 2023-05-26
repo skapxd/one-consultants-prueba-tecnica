@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
-import { StudentsService } from './students.service';
-import { StudentsController } from './students.controller';
 import { SupabaseModule } from 'src/supabase/supabase.module';
+
+import { StudentsController } from './students.controller';
+import { StudentsService } from './students.service';
 
 @Module({
   imports: [SupabaseModule],

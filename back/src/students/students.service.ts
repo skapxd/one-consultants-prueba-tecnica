@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Supabase } from 'src/supabase/supabase';
+
 import { CreateStudentDto } from './dto/create-student.dto';
 import { UpdateStudentDto } from './dto/update-student.dto';
 
